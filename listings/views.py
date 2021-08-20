@@ -1,22 +1,36 @@
-from django.shortcuts import render
-from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
+from django.shortcuts import render, get_object_or_404
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Listing
-
+from .choices import price_choices,state_choices,bedroom_choices
 
 def index(request):
     # listings=Listing.objects.order_by('id')  # fetching all listing objects from database
-    listings=Listing.objects.order_by('-list_date')  # fetching all listing objects from database
+    # fetching all listing objects from database
+    listings = Listing.objects.order_by('-list_date')
 
-    paginator=Paginator(listings, 6)  # creating a paginator object
-    page=request.GET.get('page')     # getting the desired page number from url
-    paged_listings=paginator.get_page(page) #returns the desired page object
-    context={'listings':paged_listings}
-    return render(request, 'listings/listings.html',context)
+    paginator = Paginator(listings, 3)  # creating a paginator object
+    # getting the desired page number from url
+    page = request.GET.get('page')
+    # returns the desired page object
+    paged_listings = paginator.get_page(page)
+    context = {'listings': paged_listings}
+    return render(request, 'listings/listings.html', context)
 
 
 def listing(request, listing_id):
-    return render(request, 'listings/listing.html')
+    listing = get_object_or_404(Listing, pk=listing_id)
+    context = {
+        'listing': listing
+    }
+
+    return render(request, 'listings/listing.html',context)
 
 
 def search(request):
-    return render(request, 'listings/search.html')
+
+    context={
+        'state_choices':state_choices,
+        'price_choices':price_choices,
+        'bedroom_choices':bedroom_choices,
+    }
+    return render(request, 'listings/search.html',context)
