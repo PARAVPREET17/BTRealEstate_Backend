@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {%load humanize %}
+{% block title %} | {{listing.title}}{% endblock %}
 {% block content %}
 <section id="showcase-inner" class="py-5 text-white">
     <div class="container">
@@ -168,7 +169,7 @@
             </div>
             <div class="modal-body">
                 <form>
-                    {%csrf_token%}
+                    {% csrf_token %}
                     <div class="form-group">
                         <label for="property_name" class="col-form-label">Property:</label>
                         <input type="text" name="listing" class="form-control" value="45 Drivewood Cirlce" disabled>
