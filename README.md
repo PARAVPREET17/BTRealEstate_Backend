@@ -1,6 +1,6 @@
 ## BTRealEstae_Backend
 
-
+[![alt text](https://github.com/PARAVPREET17/BTRealEstate_Backend/blob/master/Screenshot%202021-08-22%20142951.png)]
 ## Running this project
 
 To get this project up and running you should start by having Python installed on your computer. It's advised you create a virtual environment to store your projects dependencies separately. You can install virtualenv with
