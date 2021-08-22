@@ -34,7 +34,7 @@ python manage.py runserver
 ```
 <div align="center">
 
-<i>Other places you can find us:</i><br>
+<i>Other places you can find me:</i><br>
 
 
 
