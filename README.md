@@ -12,13 +12,18 @@ pip install virtualenv
 Clone or download this repository and open it in your editor of choice. In a terminal (mac/linux) or windows terminal, run the following command in the base directory of this project
 
 ```
-virtualenv env
+virtualenv venv
 ```
 
-That will create a new folder `env` in your project directory. Next activate it with this command on mac/linux:
+That will create a new folder `venv` in your project directory. Next activate it with this command on mac/linux:
 
 ```
-source env/bin/active
+source venv/bin/active
+```
+
+For windows:
+```
+.\venv\Scripts\activate 
 ```
 
 Then install the project dependencies with
