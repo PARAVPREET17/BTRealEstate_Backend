@@ -32,3 +32,10 @@ Now you can run the project with this command
 ```
 python manage.py runserver
 ```
+<div align="center">
+
+<i>Other places you can find us:</i><br>
+
+
+
+</div>
