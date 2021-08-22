@@ -1,4 +1,4 @@
-## BTRealEstae_Backend
+## BTRealEstate_Backend
 
 ![alt text](https://github.com/PARAVPREET17/BTRealEstate_Backend/blob/master/Screenshot%202021-08-22%20142951.png)
 ## Running this project
